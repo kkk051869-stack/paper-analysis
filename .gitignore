@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.tmp
+*.bak
+presentagent.txt
+slidetailor.txt
