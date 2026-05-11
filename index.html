@@ -2349,13 +2349,13 @@ body::after {
 
     <!-- Narrative Flow -->
     <div style="background: var(--bg-surface); border-radius: var(--radius-md); padding: var(--space-5); border-left: 3px solid var(--accent-gold); margin-bottom: var(--space-6);">
-      <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Narrative Flow</div>
+      <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-2);">Narrative Flow · 叙事流程偏好</div>
       <div style="display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;">
-        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Title</span>
+        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Title <span style="font-weight:400; font-size:0.75rem; opacity:0.7;">标题页</span></span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold-dim)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Background / Prior Hypothesis</span>
+        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Background / Prior Hypothesis <span style="font-weight:400; font-size:0.75rem; opacity:0.7;">背景与先前假设</span></span>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-gold-dim)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Problem Statement / Critical Question</span>
+        <span style="background: rgba(212, 168, 83, 0.15); color: var(--accent-gold-light); padding: var(--space-2) var(--space-4); border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Problem Statement / Critical Question <span style="font-weight:400; font-size:0.75rem; opacity:0.7;">问题陈述与核心疑问</span></span>
       </div>
     </div>
 
@@ -2364,9 +2364,10 @@ body::after {
       <table class="data-table">
         <thead>
           <tr>
-            <th>Section</th>
-            <th>Content Handling</th>
-            <th>Formatting</th>
+            <th>Section · 章节</th>
+            <th>Content Handling · 处理方式</th>
+            <th>Formatting · 格式偏好</th>
+            <th>中文说明</th>
           </tr>
         </thead>
         <tbody>
@@ -2374,16 +2375,19 @@ body::after {
             <td style="font-weight: 600; color: var(--text-heading);">Title</td>
             <td><span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600;">Condensed</span></td>
             <td style="color: var(--text-secondary); font-size: 0.88rem;">Minimal Text / Full Sentences</td>
+            <td style="color: var(--text-muted); font-size: 0.82rem;">标题页仅保留论文标题、作者、机构，不加正文内容</td>
           </tr>
           <tr>
             <td style="font-weight: 600; color: var(--text-heading);">Background / Prior Hypothesis</td>
             <td><span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600;">Condensed</span></td>
             <td style="color: var(--text-secondary); font-size: 0.88rem;">Visualization-heavy</td>
+            <td style="color: var(--text-muted); font-size: 0.82rem;">用视觉引用替代文字综述，展示先前论文封面形成"证据墙"</td>
           </tr>
           <tr>
             <td style="font-weight: 600; color: var(--text-heading);">Problem Statement / Critical Question</td>
             <td><span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600;">Condensed</span></td>
             <td style="color: var(--text-secondary); font-size: 0.88rem;">Short Phrases / Bullet Points</td>
+            <td style="color: var(--text-muted); font-size: 0.82rem;">用简短有力的要点引出核心问题，制造叙事悬念</td>
           </tr>
         </tbody>
       </table>
@@ -2391,14 +2395,14 @@ body::after {
 
     <!-- Omitted Sections -->
     <div style="margin-top: var(--space-5);">
-      <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3);">Omitted Sections</div>
+      <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3);">Omitted Sections · 被省略的章节</div>
       <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Related Work (Textual Summary)</span>
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Problem Setup / Mathematical Formulation</span>
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Methodology / Proposed Approach</span>
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Experimental Results</span>
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Theoretical Analysis</span>
-        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Conclusion</span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Related Work <span style="opacity:0.6">相关工作</span></span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Problem Setup / Math Formulation <span style="opacity:0.6">问题建模</span></span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Methodology <span style="opacity:0.6">方法论</span></span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Experimental Results <span style="opacity:0.6">实验结果</span></span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Theoretical Analysis <span style="opacity:0.6">理论分析</span></span>
+        <span style="background: rgba(207, 102, 121, 0.08); color: var(--accent-red); border: 1px solid rgba(207, 102, 121, 0.2); padding: var(--space-1) var(--space-4); border-radius: 14px; font-size: 0.8rem;">Conclusion <span style="opacity:0.6">结论</span></span>
       </div>
     </div>
   </div>
@@ -2421,8 +2425,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Minimal Text / Full Sentences</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_0</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Introduce title, authors, affiliation</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"Good morning/afternoon. I am Wenzheng Zeng... we present 'SlideTailor: Personalized Presentation Slide Generation...'"</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Introduce title, authors, affiliation — 介绍论文标题、作者与机构</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"Good morning/afternoon. I am Wenzheng Zeng... we present 'SlideTailor: Personalized Presentation Slide Generation...'"</div>
       </div>
 
       <!-- Slide 2 -->
@@ -2433,8 +2437,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Conversational Tone</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Broader context of GenAI in document processing</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"To understand our work, we must first look at the current landscape... the leap from text to structured visual presentations is significantly more complex..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Broader context of GenAI in document processing — 建立生成式 AI 在文档处理领域的宏观背景</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"To understand our work, we must first look at the current landscape... the leap from text to structured visual presentations is significantly more complex..."</div>
       </div>
 
       <!-- Slide 3 -->
@@ -2446,8 +2450,8 @@ body::after {
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_3</span>
           <span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600;">🖼 image</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Wall of evidence, key prior works</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"Let's look at the foundation... the consensus has been driven by a specific hypothesis: effective slide generation through generalized mapping strategies..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Wall of evidence, key prior works — "证据墙"策略，视觉化展示先前代表性工作</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"Let's look at the foundation... the consensus has been driven by a specific hypothesis: effective slide generation through generalized mapping strategies..."</div>
       </div>
 
       <!-- Slide 4 -->
@@ -2459,8 +2463,8 @@ body::after {
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_3</span>
           <span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600;">🖼 image</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>More prior art, generalist approach</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"Expanding on this, we see a proliferation of methods... the primary innovation has been in improving fidelity for a broad audience..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>More prior art, generalist approach — 延续证据展示，强调"通用型"方法主导地位</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"Expanding on this, we see a proliferation of methods... the primary innovation has been in improving fidelity for a broad audience..."</div>
       </div>
 
       <!-- Slide 5 -->
@@ -2472,8 +2476,8 @@ body::after {
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_3</span>
           <span style="background: rgba(78, 205, 196, 0.12); color: var(--accent-teal); padding: 2px 8px; border-radius: 10px; font-size: 0.68rem; font-weight: 600;">🖼 image</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Final evidence, volume of status quo</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"The pattern is clear. The community has invested heavily in refining general-purpose frameworks... this very consensus may be hiding a critical limitation..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Final evidence, volume of status quo — 用视觉密度强调现有共识的体量，为质疑铺垫</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"The pattern is clear. The community has invested heavily in refining general-purpose frameworks... this very consensus may be hiding a critical limitation..."</div>
       </div>
 
       <!-- Slide 6 -->
@@ -2484,8 +2488,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Short Phrases / Bullet Points</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>One-Size-Fits-All belief</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"What is the core belief? The 'One-Size-Fits-All' assumption... a single optimal slide structure exists regardless of presenter style, audience expertise..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>One-Size-Fits-All belief — 揭示先前工作背后的隐性假设："一刀切"通用方案</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"What is the core belief? The 'One-Size-Fits-All' assumption... a single optimal slide structure exists regardless of presenter style, audience expertise..."</div>
       </div>
 
       <!-- Slide 7 -->
@@ -2496,8 +2500,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Short Phrases / Bullet Points</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Failures of generalist approach</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"Why does this assumption fail? Because scientific presentation is not static. A slide deck for novice differs from one for peers..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Failures of generalist approach — 论证通用方案的失败：受众差异、场景差异导致输出平庸</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"Why does this assumption fail? Because scientific presentation is not static. A slide deck for novice differs from one for peers..."</div>
       </div>
 
       <!-- Slide 8 -->
@@ -2508,8 +2512,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Short Phrases / Bullet Points</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Narrative hook, paradigm shift</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"If we accept that presentation is inherently contextual, then the One-Size-Fits-All model is fundamentally flawed. Can we distill user preferences dynamically?"</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Narrative hook, paradigm shift — 叙事转折点：从"内容导向"转向"偏好导向"的范式变革</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"If we accept that presentation is inherently contextual, then the One-Size-Fits-All model is fundamentally flawed. Can we distill user preferences dynamically?"</div>
       </div>
 
       <!-- Slide 9 -->
@@ -2520,8 +2524,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Short Phrases / Bullet Points</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Core concept as solution</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"SlideTailor is not just a generator; it is a personalized tailoring system... bridging rigid papers and fluid, personalized needs of presenters..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Core concept as solution — 引出 SlideTailor 核心概念：个性化裁剪系统</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"SlideTailor is not just a generator; it is a personalized tailoring system... bridging rigid papers and fluid, personalized needs of presenters..."</div>
       </div>
 
       <!-- Slide 10 -->
@@ -2532,8 +2536,8 @@ body::after {
           <span style="background: rgba(91, 141, 239, 0.12); color: var(--accent-blue); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Concise Bullet Points</span>
           <span style="background: rgba(212, 168, 83, 0.1); color: var(--accent-gold); padding: 2px 10px; border-radius: 10px; font-size: 0.72rem; font-weight: 600;">layout: slide_1</span>
         </div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose</strong><br>Recap + roadmap</div>
-        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft</span>"We have outlined the consensus, challenged its core assumption, identified the need for personalization, and positioned SlideTailor as the solution..."</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: var(--space-3); line-height: 1.5;"><strong style="color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;">Purpose · 目的</strong><br>Recap + roadmap — 回顾论证链路（背景→共识→质疑→挑战），预告后续方法与实验</div>
+        <div style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; background: var(--bg-surface); border-radius: var(--radius-sm); padding: var(--space-3) var(--space-4);"><span style="color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Speech Draft · 演讲稿</span>"We have outlined the consensus, challenged its core assumption, identified the need for personalization, and positioned SlideTailor as the solution..."</div>
       </div>
 
     </div>
