@@ -106,6 +106,87 @@
 .theme-toggle svg { width: 20px; height: 20px; transition: transform 0.4s; }
 .theme-toggle:hover svg { transform: rotate(30deg); }
 
+/* ========== TABLE OF CONTENTS ========== */
+.toc-toggle {
+  position: fixed;
+  top: 72px;
+  right: 20px;
+  z-index: 10000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium);
+  background: var(--bg-card);
+  color: var(--accent-gold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.toc-toggle:hover { transform: scale(1.1); box-shadow: var(--shadow-elevated); }
+.toc-toggle svg { width: 20px; height: 20px; }
+
+.toc-panel {
+  position: fixed;
+  top: 126px;
+  right: 20px;
+  z-index: 9999;
+  width: 220px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  padding: var(--space-5);
+  transform: translateX(260px);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s;
+  pointer-events: none;
+}
+.toc-panel.open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.toc-panel::-webkit-scrollbar { width: 4px; }
+.toc-panel::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 2px; }
+
+.toc-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+  letter-spacing: 0.05em;
+}
+.toc-list { list-style: none; }
+.toc-list li { margin-bottom: 2px; }
+.toc-list a {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s, color 0.2s, border-left-color 0.2s;
+  border-left: 2px solid transparent;
+  line-height: 1.4;
+}
+.toc-list a:hover {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+.toc-list a.active {
+  color: var(--accent-gold);
+  background: rgba(212, 168, 83, 0.08);
+  border-left-color: var(--accent-gold);
+  font-weight: 600;
+}
+
 /* ========== RESET & BASE ========== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1295,6 +1376,25 @@ body::after {
   <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
 </button>
 
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<button class="toc-toggle" id="tocToggle" aria-label="Toggle table of contents" title="目录导航">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="18" y2="18"/></svg>
+</button>
+<nav class="toc-panel" id="tocPanel">
+  <div class="toc-title">目录导航</div>
+  <ul class="toc-list">
+    <li><a href="#sec-paper1">Paper 01 · PresentAgent</a></li>
+    <li><a href="#sec-paper2">Paper 02 · SlideTailor</a></li>
+    <li><a href="#sec-comparison">横向对比</a></li>
+    <li><a href="#sec-analysis">优劣势分析</a></li>
+    <li><a href="#sec-rating">多维星级评分</a></li>
+    <li><a href="#sec-recommendation">方向推荐</a></li>
+    <li><a href="#sec-qa">关键问题准备</a></li>
+    <li><a href="#sec-experiment">本地实验</a></li>
+    <li><a href="#sec-future">未来研究优化路径</a></li>
+  </ul>
+</nav>
+
 <!-- ==================== HERO ==================== -->
 <section class="hero">
   <div class="hero-badge">Literature Review</div>
@@ -1321,7 +1421,7 @@ body::after {
 </section>
 
 <!-- ==================== PAPER 1: PRESENTAGENT ==================== -->
-<div class="section">
+<div class="section" id="sec-paper1">
   <div class="section-header reveal">
     <div class="section-number">Paper 01</div>
     <h2>PresentAgent</h2>
@@ -1551,7 +1651,7 @@ body::after {
 </div>
 
 <!-- ==================== PAPER 2: SLIDETAILOR ==================== -->
-<div class="section" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.02), transparent);">
+<div class="section" id="sec-paper2" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.02), transparent);">
   <div class="section-header reveal">
     <div class="section-number">Paper 02</div>
     <h2>SlideTailor</h2>
@@ -1833,7 +1933,7 @@ body::after {
 </div>
 
 <!-- ==================== HEAD-TO-HEAD COMPARISON ==================== -->
-<div class="section">
+<div class="section" id="sec-comparison">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Comparison</div>
     <h2>正面对比分析</h2>
@@ -1883,7 +1983,7 @@ body::after {
 </div>
 
 <!-- ==================== PROS & CONS ==================== -->
-<div class="section" style="background: linear-gradient(180deg, transparent, rgba(0,0,0,0.15), transparent);">
+<div class="section" id="sec-analysis" style="background: linear-gradient(180deg, transparent, rgba(0,0,0,0.15), transparent);">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Analysis</div>
     <h2>优劣势深度剖析</h2>
@@ -1960,7 +2060,7 @@ body::after {
 </div>
 
 <!-- ==================== STAR RATING ==================== -->
-<div class="section">
+<div class="section" id="sec-rating">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Rating</div>
     <h2>多维度星级评定</h2>
@@ -2126,7 +2226,7 @@ body::after {
 </div>
 
 <!-- ==================== RECOMMENDATION ==================== -->
-<div class="section" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.03), transparent);">
+<div class="section" id="sec-recommendation" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.03), transparent);">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Recommendation</div>
     <h2>场景化推荐</h2>
@@ -2168,7 +2268,7 @@ body::after {
 </div>
 
 <!-- ==================== Q&A PREP ==================== -->
-<div class="section">
+<div class="section" id="sec-qa">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Q&A</div>
     <h2>关键问题讨论</h2>
@@ -2239,7 +2339,7 @@ body::after {
 </div>
 
 <!-- ==================== EXPERIMENT ==================== -->
-<div class="section" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.04), transparent);">
+<div class="section" id="sec-experiment" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.04), transparent);">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Experiment</div>
     <h2>本地实验：用 SlideTailor 论文生成 Slides</h2>
@@ -2610,7 +2710,7 @@ body::after {
 </div>
 
 <!-- ==================== FUTURE DIRECTIONS ==================== -->
-<div class="section" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.03), transparent);">
+<div class="section" id="sec-future" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.03), transparent);">
   <div class="section-header reveal" style="text-align: center;">
     <div class="section-number" style="text-align: center;">Future Directions</div>
     <h2>后续研究方向与优化路径</h2>
@@ -2875,6 +2975,65 @@ body::after {
     localStorage.setItem('theme', next);
     applyTheme(next);
   });
+})();
+
+// ==================== TABLE OF CONTENTS ====================
+(function() {
+  var tocToggle = document.getElementById('tocToggle');
+  var tocPanel = document.getElementById('tocPanel');
+  var tocLinks = tocPanel.querySelectorAll('.toc-list a');
+  var sectionIds = [
+    'sec-paper1', 'sec-paper2', 'sec-comparison', 'sec-analysis',
+    'sec-rating', 'sec-recommendation', 'sec-qa', 'sec-experiment', 'sec-future'
+  ];
+
+  // Toggle panel
+  tocToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    tocPanel.classList.toggle('open');
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!tocPanel.contains(e.target) && e.target !== tocToggle) {
+      tocPanel.classList.remove('open');
+    }
+  });
+
+  // Close on link click
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      tocPanel.classList.remove('open');
+    });
+  });
+
+  // Scroll spy — highlight active section
+  var sections = sectionIds.map(function(id) { return document.getElementById(id); });
+
+  function updateActive() {
+    var scrollTop = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var active = null;
+
+    for (var i = sections.length - 1; i >= 0; i--) {
+      var sec = sections[i];
+      if (sec && sec.offsetTop - windowHeight / 3 <= scrollTop) {
+        active = i;
+        break;
+      }
+    }
+
+    tocLinks.forEach(function(link, idx) {
+      if (idx === active) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
 })();
 </script>
 
