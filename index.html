@@ -1389,7 +1389,6 @@ body::after {
     <li><a href="#sec-analysis">优劣势分析</a></li>
     <li><a href="#sec-rating">多维星级评分</a></li>
     <li><a href="#sec-recommendation">方向推荐</a></li>
-    <li><a href="#sec-qa">关键问题准备</a></li>
     <li><a href="#sec-experiment">本地实验</a></li>
     <li><a href="#sec-future">未来研究优化路径</a></li>
   </ul>
@@ -2267,77 +2266,6 @@ body::after {
   </div>
 </div>
 
-<!-- ==================== Q&A PREP ==================== -->
-<div class="section" id="sec-qa">
-  <div class="section-header reveal" style="text-align: center;">
-    <div class="section-number" style="text-align: center;">Q&A</div>
-    <h2>关键问题讨论</h2>
-    <div class="section-divider center"></div>
-    <p style="margin-left: auto; margin-right: auto;">核心问题的思考与解答</p>
-  </div>
-
-  <div class="qa-list">
-    <div class="qa-item open reveal">
-      <div class="qa-question" onclick="toggleQA(this)">
-        <div class="qa-q-marker">Q1</div>
-        <div class="qa-q-text">这两篇论文的核心差异是什么？如果只能选一个方向深入研究，你选哪个？</div>
-        <div class="qa-q-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-      </div>
-      <div class="qa-answer" style="max-height: 300px;">
-        <div class="qa-answer-inner">
-          核心差异在于<strong>任务定义</strong>和<strong>创新维度</strong>：PresentAgent 聚焦"文档→视频"的端到端生成，创新点在于多模态融合与 Pipeline 组装；SlideTailor 聚焦"论文→幻灯片"的个性化生成，创新点在于偏好蒸馏与 Chain-of-Speech。<br><br>
-          如果只选一个，我会选 <strong>SlideTailor 方向</strong>，原因是：（1）AAAI 主会的方法论深度更高，研究空间更大；（2）个性化/偏好学习是学术界的热点话题，延展性强；（3）Chain-of-Speech 机制有独立的研究价值，可以深入挖掘。但最终的理想方案是两者的融合。
-        </div>
-      </div>
-    </div>
-
-    <div class="qa-item reveal">
-      <div class="qa-question" onclick="toggleQA(this)">
-        <div class="qa-q-marker">Q2</div>
-        <div class="qa-q-text">SlideTailor 的 Chain-of-Speech 机制，和你之前了解的 CoT（Chain-of-Thought）有什么异同？</div>
-        <div class="qa-q-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-      </div>
-      <div class="qa-answer">
-        <div class="qa-answer-inner">
-          <strong>相同点：</strong>都是通过构建中间推理链路来提升生成质量，核心思想是"分步思考优于一步到位"。<br><br>
-          <strong>不同点：</strong>CoT 主要用于 LLM 的文本推理任务（数学、逻辑），中间步骤是文本 token；而 CoS 的中间步骤是<strong>模拟口头演讲的语义单元</strong>，它的推理链路是从"论文内容"到"演讲意图"再到"幻灯片布局"的跨模态映射。CoS 本质上是一种<strong>模态转换的推理桥</strong>，将学术写作的语义空间映射到口头表达的语义空间。
-        </div>
-      </div>
-    </div>
-
-    <div class="qa-item reveal">
-      <div class="qa-question" onclick="toggleQA(this)">
-        <div class="qa-q-marker">Q3</div>
-        <div class="qa-q-text">这两篇论文都依赖 LLM API，如果开源模型持续进步，这个方向还有独立的研究价值吗？</div>
-        <div class="qa-q-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-      </div>
-      <div class="qa-answer">
-        <div class="qa-answer-inner">
-          有，而且会<strong>越来越有价值</strong>。原因有三：<br><br>
-          （1）LLM 是基础设施而非研究终点。就像计算机视觉研究不因相机进步而消失，PPT 生成的核心问题（内容筛选、结构规划、视觉表达、个性化适配）是独立于 LLM 的研究课题。<br><br>
-          （2）SlideTailor 已经验证了这一点——其核心贡献（偏好蒸馏、CoS）是框架层面的创新，与具体使用哪个 LLM 无关。实验也表明切换后端（Qwen → GPT-4.1）可以带来性能提升。<br><br>
-          （3）随着开源模型逼近闭源模型能力，成本和可控性问题将逐步解决，届时研究重心会从"能不能做"转向"如何做得更好"，这正是学术研究的价值所在。
-        </div>
-      </div>
-    </div>
-
-    <div class="qa-item reveal">
-      <div class="qa-question" onclick="toggleQA(this)">
-        <div class="qa-q-marker">Q4</div>
-        <div class="qa-q-text">你提到的"融合方案"具体怎么做？有哪些技术挑战？</div>
-        <div class="qa-q-toggle"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
-      </div>
-      <div class="qa-answer">
-        <div class="qa-answer-inner">
-          融合方案的核心思路是：以 SlideTailor 的偏好驱动框架为骨架，注入 PresentAgent 的多模态输出能力。<br><br>
-          <strong>具体架构：</strong>用户输入示例对 + 模板 → 偏好蒸馏 → Chain-of-Speech 规划（生成演讲脚本）→ 幻灯片生成（.pptx，可编辑中间产物）→ TTS 合成旁白 → 视频组装（最终产物）。<br><br>
-          <strong>技术挑战：</strong>（1）CoS 生成的演讲脚本如何与 TTS 时间轴精确对齐；（2）偏好蒸馏在视频生成场景下是否依然有效（视频比幻灯片多一个时间维度）；（3）输出两种格式（.pptx + .mp4）的联合评估标准如何设计。这些挑战本身也是研究贡献点。
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ==================== EXPERIMENT ==================== -->
 <div class="section" id="sec-experiment" style="background: linear-gradient(180deg, transparent, rgba(212, 168, 83, 0.04), transparent);">
   <div class="section-header reveal" style="text-align: center;">
@@ -2984,7 +2912,7 @@ body::after {
   var tocLinks = tocPanel.querySelectorAll('.toc-list a');
   var sectionIds = [
     'sec-paper1', 'sec-paper2', 'sec-comparison', 'sec-analysis',
-    'sec-rating', 'sec-recommendation', 'sec-qa', 'sec-experiment', 'sec-future'
+    'sec-rating', 'sec-recommendation', 'sec-experiment', 'sec-future'
   ];
 
   // Toggle panel
